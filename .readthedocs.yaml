@@ -15,6 +15,5 @@ python:
   install:
     - method: pip
       path: .
-      extra-dependencies:
-        - sphinx
-        - sphinx-rtd-theme
+      - sphinx
+      - sphinx-rtd-theme
