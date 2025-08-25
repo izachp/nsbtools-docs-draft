@@ -15,5 +15,6 @@ python:
   install:
     - path: .
       editable: true
-    - sphinx
-    - sphinx-rtd-theme
+    - pip: 
+        - sphinx
+        - sphinx-rtd-theme
