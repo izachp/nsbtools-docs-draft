@@ -34,6 +34,13 @@ source_suffix = {
 autosummary_generate = True
 autodoc_typehints = "description"
 
+autodoc_default_options = {
+    "members": True,
+    "undoc-members": True,
+    "show-inheritance": True,
+    "inherited-members": True,
+}
+
 # -- Options for HTML output -------------------------------------------------
 html_theme = "sphinx_rtd_theme"
 html_static_path = []
