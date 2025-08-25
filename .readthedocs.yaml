@@ -16,6 +16,6 @@ python:
     - method: pip
       path: .
     - method: pip
-      requirements:
-        - sphinx
-        - sphinx-rtd-theme
+      requirements: sphinx
+    - method: pip
+      requirements: sphinx-rtd-theme
