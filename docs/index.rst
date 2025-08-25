@@ -1,10 +1,14 @@
-.. nsbtools documentation master file, created by sphinx-quickstart
+.. include:: ../README.rst
 
-Welcome to nsbtools' documentation!
-====================================
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 1
+
+   usage
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    modules
