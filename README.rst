@@ -1,4 +1,4 @@
-.. image:: https://github.com/izachp/nsbtools-docs-draft/raw/main/docs/_static/sillylogo.png
+.. image:: https://github.com/izachp/nsbtools-docs-draft/raw/main/docs/_static/logo.png
    :alt: Eigenlogo
 
 Neuroimaging tools developed by the `Neural Systems and Behaviour Lab <https://www.monash.edu/medicine/psych/alex-fornito-lab>`_.
@@ -11,7 +11,7 @@ Features
 
 Installation
 ------------
-``nsbtools`` works with Python 3.9 to 3.11. It can be installed by cloning the repository and installing from the local directory:
+``nsbtools`` works with Python 3.9 to 3.12. It can be installed by cloning the repository and installing from the local directory:
 
 ``git clone https://github.com/NSBLab/nsbtools``
 ``cd nsbtools``

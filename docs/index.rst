@@ -6,7 +6,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   usage
+   tutorials
 
 .. toctree::
    :maxdepth: 2
