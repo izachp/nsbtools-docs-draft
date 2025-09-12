@@ -1,28 +1,4 @@
 import numpy as np
-from pathlib import Path
-from dotenv import load_dotenv
-
-
-def load_project_env(marker_file=".env", override=True):
-    """
-    Walk upward from the location of this script to find a .env file, and load its contents into 
-    the environment.
-
-    Parameters
-    ----------
-    marker_file : str, optional
-        The name of the marker file to look for. Default is ".env".
-    override : bool, optional
-        If True, override existing environment variables with the same name. Default is True.
-    """
-
-    current = Path(Path.cwd()).resolve()
-    for parent in [current] + list(current.parents):
-        env_path = parent / marker_file
-        if env_path.exists():
-            load_dotenv(dotenv_path=env_path, override=override)
-            return  # Exit after loading
-    raise FileNotFoundError(f"Could not find {marker_file} in any parent directory.")
 
 def unmask(data, medmask, val=np.nan):
     """
