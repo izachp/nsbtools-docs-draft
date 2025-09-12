@@ -10,10 +10,6 @@ This tutorial covers the main features of ``nsbtools``, including geometric eige
  encounter any issues, please open an issue on the `GitHub repository 
  <https://github.com/NSBLab/nsbtools/issues>`_.
 
-.. contents::
-   :local:
-   :depth: 2
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
