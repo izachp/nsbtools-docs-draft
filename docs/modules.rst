@@ -6,3 +6,8 @@ API Reference
    :recursive:
 
    nsbtools
+
+.. automodule:: nsbtools
+    :members:
+    :undoc-members:
+    :show-inheritance:
