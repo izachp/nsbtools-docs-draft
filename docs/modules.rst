@@ -25,14 +25,19 @@ API Reference
 
    EigenSolver
 
+.. autoclass:: EigenSolver
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 .. autosummary::
    :template: function.rst
    :toctree: generated/
 
-   EigenSolver.solve
-   EigenSolver.decompose
-   EigenSolver.reconstruct
-   EigenSolver.simulate_waves
+   nsbtools.eigen.EigenSolver.solve
+   nsbtools.eigen.EigenSolver.decompose
+   nsbtools.eigen.EigenSolver.reconstruct
+   nsbtools.eigen.EigenSolver.simulate_waves
 
 .. autosummary::
    :template: function.rst
