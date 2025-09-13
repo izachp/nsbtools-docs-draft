@@ -28,6 +28,18 @@ Classes
 
    EigenSolver
 
+EigenSolver Methods
+~~~~~~~~~~~~~~~~~~~
+
+.. autosummary::
+   :template: function.rst
+   :toctree: generated/
+
+   nsbtools.eigen.EigenSolver.solve
+   nsbtools.eigen.EigenSolver.decompose
+   nsbtools.eigen.EigenSolver.reconstruct
+   nsbtools.eigen.EigenSolver.simulate_waves
+
 Functions
 ~~~~~~~~~
 
