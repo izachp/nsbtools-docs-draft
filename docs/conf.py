@@ -35,7 +35,7 @@ source_suffix = {
 }
 
 autosummary_generate = True
-autodoc_typehints = "description"
+templates_path = ["_templates"]
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = "sphinx_rtd_theme"
