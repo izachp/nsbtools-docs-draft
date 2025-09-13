@@ -11,7 +11,7 @@ API Reference
 .. _ref_eigen:
 
 :mod:`nsbtools.eigen` - Eigenmode analyses on cortical surfaces
--------------------------------------------------------------------------
+---------------------------------------------------------------
 
 .. automodule:: nsbtools.eigen
    :no-members:
@@ -19,29 +19,20 @@ API Reference
 
 .. currentmodule:: nsbtools.eigen
 
-Classes
-~~~~~~~
-
 .. autosummary::
    :template: class.rst
    :toctree: generated/
 
    EigenSolver
 
-EigenSolver Methods
-~~~~~~~~~~~~~~~~~~~
-
 .. autosummary::
    :template: function.rst
    :toctree: generated/
 
-   nsbtools.eigen.EigenSolver.solve
-   nsbtools.eigen.EigenSolver.decompose
-   nsbtools.eigen.EigenSolver.reconstruct
-   nsbtools.eigen.EigenSolver.simulate_waves
-
-Functions
-~~~~~~~~~
+   EigenSolver.solve
+   EigenSolver.decompose
+   EigenSolver.reconstruct
+   EigenSolver.simulate_waves
 
 .. autosummary::
    :template: function.rst
