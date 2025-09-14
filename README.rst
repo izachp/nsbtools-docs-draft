@@ -13,9 +13,11 @@ Installation
 ------------
 ``nsbtools`` works with Python 3.9 to 3.12. It can be installed by cloning the repository and installing from the local directory:
 
-``git clone https://github.com/NSBLab/nsbtools``
-``cd nsbtools``
-``pip install .``
+::
+
+  git clone https://github.com/NSBLab/nsbtools
+  cd nsbtools
+  pip install .
 
 License information
 -------------------
