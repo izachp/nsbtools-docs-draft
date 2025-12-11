@@ -9,7 +9,7 @@ import trimesh
 from lapy import Solver, TriaMesh
 from scipy.stats import zscore
 from scipy.integrate import solve_ivp
-from nsbtools.basis import decompose
+from nsbtools.basis import decompose as _external_decompose
 
 # Set up joblib memory caching
 CACHE_DIR = os.getenv("CACHE_DIR")
@@ -962,4 +962,4 @@ def model_balloon_ode(mode_coeff, t):
     
     return bold
 
-EigenSolver.decompose.__doc__ += "\n\n" + decompose.__doc__
+EigenSolver.decompose.__doc__ += "\n\n" + _external_decompose.__doc__
