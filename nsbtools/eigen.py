@@ -258,7 +258,7 @@ class EigenSolver(Solver):
             If the number of vertices in `data` and `emodes` do not match, if `emodes` contain NaNs,
             if an invalid method is specified, or if the `mass` matrix is not provided when
             required.
-        """
+        """ + decompose.__doc__
         if np.shape(data)[0] != np.shape(emodes)[0]:
             raise ValueError(f"The number of elements in `data` ({np.shape(data)[0]}) must match "
                              f"the number of vertices in `emodes` ({np.shape(emodes)[0]}).")
@@ -961,3 +961,9 @@ def model_balloon_ode(mode_coeff, t):
     bold = V0 * (k1 * (1 - q) + k2 * (1 - q / v) + k3 * (1 - v))
     
     return bold
+
+def decompose():
+    """
+    Docstring for external decompose
+    """
+    pass
