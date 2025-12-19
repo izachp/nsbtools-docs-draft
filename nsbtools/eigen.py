@@ -1,4 +1,5 @@
 import os
+import sys
 import warnings
 import importlib
 import numpy as np
@@ -9,7 +10,6 @@ import trimesh
 from lapy import Solver, TriaMesh
 from scipy.stats import zscore
 from scipy.integrate import solve_ivp
-from nsbtools.basis import decompose as _external_decompose
 
 # Set up joblib memory caching
 CACHE_DIR = os.getenv("CACHE_DIR")
@@ -220,44 +220,7 @@ class EigenSolver(Solver):
     def decompose(data, emodes, method='orthogonal', mass=None, return_norm_power=False,
                   check_orthonorm=True):
         """
-        Calculate the eigen-decomposition of the given data using the specified method.
-
-        Parameters
-        ----------
-        data : array-like
-            The input data array of shape (n_verts, n_maps), where n_verts is the number of vertices 
-            and n_maps is the number of brain maps.
-        emodes : array-like
-            The eigenmodes array of shape (n_verts, n_modes), where n_modes is the number of 
-            eigenmodes.
-        method : str, optional
-            The method used for the eigen-decomposition, either 'orthogonal' or 'regress'. Default is
-            'orthogonal'.
-        mass : array-like, optional
-            The mass matrix of shape (n_verts, n_verts) used for the eigen-decomposition when method
-            is 'orthogonal'. If using EigenSolver, provide its self.mass. Default is None.
-        return_norm_power : bool, optional
-            If True, returns normalized power of each mode instead of beta coefficients. Default is
-            False.
-        check_orthonorm : bool, optional
-            If True and mass is not None, checks that the eigenmodes are mass-orthonormal. Default 
-            is True. See the check_orthonorm_modes function for details.
-
-        Returns
-        -------
-        beta : numpy.ndarray
-            The beta coefficients array of shape (n_modes, n_maps), obtained from the
-            eigen-decomposition.
-        norm_power : numpy.ndarray, optional
-            The normalized power array of shape (n_modes, n_maps), obtained from the
-            eigen-decomposition.
-
-        Raises
-        ------
-        ValueError
-            If the number of vertices in `data` and `emodes` do not match, if `emodes` contain NaNs,
-            if an invalid method is specified, or if the `mass` matrix is not provided when
-            required.
+        This is a wrapper, see below
         """
         if np.shape(data)[0] != np.shape(emodes)[0]:
             raise ValueError(f"The number of elements in `data` ({np.shape(data)[0]}) must match "
@@ -962,4 +925,6 @@ def model_balloon_ode(mode_coeff, t):
     
     return bold
 
-EigenSolver.decompose.__doc__ += "\n\n" + _external_decompose.__doc__
+if 'sphinx' in sys.modules:
+    from nsbtools.basis import decompose as _external_decompose
+    EigenSolver.decompose.__doc__ += "\n\n" + _external_decompose.__doc__
