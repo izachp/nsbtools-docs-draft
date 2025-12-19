@@ -926,5 +926,5 @@ def model_balloon_ode(mode_coeff, t):
     return bold
 
 if 'sphinx' in sys.modules:
-    from nsbtools.basis import decompose as _external_decompose
-    EigenSolver.decompose.__doc__ += "\n\n" + _external_decompose.__doc__
+    from nsbtools.basis import decompose
+    EigenSolver.decompose.__doc__ += "\n\n" + decompose.__doc__
