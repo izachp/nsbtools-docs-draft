@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
-project = "nsbtools"
+project = "neuromodes"
 copyright = "2025, Monash University"
 author = "Neural Systems and Behaviour Lab"
 
@@ -51,6 +51,14 @@ source_suffix = {
 
 autosummary_generate = True
 templates_path = ["_templates"]
+
+# -- Autodoc configuration ---------------------------------------------------
+# Prevent expansion of complex type hints
+autodoc_typehints_format = 'short'
+autodoc_type_aliases = {
+    'ArrayLike': 'numpy.typing.ArrayLike',
+    'NDArray': 'numpy.typing.NDArray',
+}
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = "sphinx_rtd_theme"

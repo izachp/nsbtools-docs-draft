@@ -1,3 +1,4 @@
+from __future__ import annotations
 import os
 import sys
 import warnings
@@ -10,6 +11,11 @@ import trimesh
 from lapy import Solver, TriaMesh
 from scipy.stats import zscore
 from scipy.integrate import solve_ivp
+from typing import Union, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from numpy.typing import ArrayLike, NDArray
+    from scipy.sparse import spmatrix
 
 # Set up joblib memory caching
 CACHE_DIR = os.getenv("CACHE_DIR")
@@ -217,8 +223,14 @@ class EigenSolver(Solver):
 
         self.emodes = emodes
     
-    def decompose(data, emodes, method='orthogonal', mass=None, return_norm_power=False,
-                  check_orthonorm=True):
+    def decompose(
+        data: ArrayLike,
+        emodes: ArrayLike,
+        method: str = 'orthogonal',
+        mass: Union[spmatrix, ArrayLike, None] = None,
+        return_norm_power: bool = False,
+        check_orthonorm: bool = True
+    ) -> NDArray:
         """
         This is a wrapper, see below
         """
