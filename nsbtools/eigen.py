@@ -226,7 +226,7 @@ class EigenSolver(Solver):
     def decompose(
         data: ArrayLike,
         emodes: ArrayLike,
-        method: str = 'orthogonal',
+        method: str = 'project',
         mass: Union[spmatrix, ArrayLike, None] = None,
         return_norm_power: bool = False,
         check_orthonorm: bool = True
@@ -244,15 +244,15 @@ class EigenSolver(Solver):
         if check_orthonorm and mass is not None:
             check_orthonorm_modes(emodes, mass)
 
-        if method == 'orthogonal':
+        if method == 'project':
             if mass is None or mass.shape != (emodes.shape[0], emodes.shape[0]):
                 raise ValueError(f"Mass matrix of shape ({emodes.shape[0]}, {emodes.shape[0]}) must "
-                                 "be provided when method is 'orthogonal'.")
+                                 "be provided when method is 'project'.")
             beta = emodes.T @ mass @ data
         elif method == 'regress':
             beta = np.linalg.solve(emodes.T @ emodes, emodes.T @ data)
         else:
-            raise ValueError(f"Invalid eigen-decomposition method '{method}'; must be 'orthogonal' "
+            raise ValueError(f"Invalid eigen-decomposition method '{method}'; must be 'project' "
                              "or 'regress'.")
 
         if return_norm_power:

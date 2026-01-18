@@ -52,13 +52,13 @@ source_suffix = {
 autosummary_generate = True
 templates_path = ["_templates"]
 
-# -- Autodoc configuration ---------------------------------------------------
-# Prevent expansion of complex type hints
-autodoc_typehints_format = 'short'
-autodoc_type_aliases = {
-    'ArrayLike': 'numpy.typing.ArrayLike',
-    'NDArray': 'numpy.typing.NDArray',
-}
+# # -- Autodoc configuration ---------------------------------------------------
+# # Prevent expansion of complex type hints
+# autodoc_typehints_format = 'short'
+# autodoc_type_aliases = {
+#     'ArrayLike': 'numpy.typing.ArrayLike',
+#     'NDArray': 'numpy.typing.NDArray',
+# }
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = "sphinx_rtd_theme"
