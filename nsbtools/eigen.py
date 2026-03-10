@@ -722,7 +722,7 @@ def check_hetero(hetero, r, gamma):
     
     References
     ----------
-    ..  [1] Koussis, N. C., et al. (2024). Generation of surrogate brain maps preserving 
+    [1] Koussis, N. C., et al. (2024). Generation of surrogate brain maps preserving 
         spatial autocorrelation through random rotation of geometric eigenmodes. 
         Imaging Neuroscience. https://doi.org/10.1162/IMAG.a.71
     """
