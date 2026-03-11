@@ -491,8 +491,7 @@ def mask_surf(surf, medmask):
 
 def check_hetero(hetero, r, gamma):
     """
-    Generate spatial null maps via eigenstrapping [1]_. hopefully this renders: [[1]_]. what about
-    this: :func:`nulls.eigenstrap`.
+    Generate spatial null maps via eigenstrapping [1]_ [2]_. Here are two more refs [3]_  [4]_.
     
     This function generates spatial null maps that preserve the spatial autocorrelation structure of
     brain maps through random rotation of geometric eigenmodes. The method works by rotating
@@ -722,9 +721,14 @@ def check_hetero(hetero, r, gamma):
     
     References
     ----------
-    [1] Koussis, N. C., et al. (2024). Generation of surrogate brain maps preserving 
-        spatial autocorrelation through random rotation of geometric eigenmodes. 
-        Imaging Neuroscience. https://doi.org/10.1162/IMAG.a.71
+    ..  [1] Pang, J. C., et al. (2023). Geometric constraints on human brain function. Nature.
+        https://doi.org/10.1038/s41586-023-06098-1
+    ..  [2] Reuter, M., et al. (2006). Laplace-Beltrami spectra as 'Shape-DNA' of surfaces and
+        solids, Computer-Aided Design. https://doi.org/10.1016/j.cad.2005.10.011
+    ..  [3] Wachinger, C., et al. (2015). BrainPrint: a discriminative characterization of brain
+        morphology, Neuroimage. https://doi.org/10.1016/j.neuroimage.2015.01.032
+    ..  [4] Barnes, V., et al. (2026). Regional heterogeneity shapes macroscopic wave dynamics of
+        the human and non-human primate cortex. bioRxiv. https://doi.org/10.64898/2026.01.22.701178
     """
     max_speed = np.max(r * gamma * np.sqrt(hetero))
     if max_speed > 150:
