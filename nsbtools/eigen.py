@@ -491,7 +491,7 @@ def mask_surf(surf, medmask):
 
 def check_hetero(hetero, r, gamma):
     """
-    Generate spatial null maps via eigenstrapping [1]_ [2]_. Here are two more refs [3]_  [4]_.
+    Generate spatial null maps via eigenstrapping [1]_ [2]_. Here are two more refs ([3]_,[4]_).
     
     This function generates spatial null maps that preserve the spatial autocorrelation structure of
     brain maps through random rotation of geometric eigenmodes. The method works by rotating

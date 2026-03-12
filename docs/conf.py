@@ -65,3 +65,4 @@ html_theme = "sphinx_rtd_theme"
 html_show_sourcelink = False
 html_logo = '_static/logo.png'
 html_theme_options = {'logo_only': True}
+html_css_files = ['custom.css']
